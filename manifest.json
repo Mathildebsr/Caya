@@ -1,0 +1,21 @@
+{
+  "name": "Caya Reminder",
+  "short_name": "Caya",
+  "description": "Une application pour rappeler aux femmes de retirer leur diaphragme contraceptif.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F7F7F7",
+  "theme_color": "#C781BB",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
