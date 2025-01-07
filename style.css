@@ -1,0 +1,151 @@
+/* Reset */
+body, h1, h2, p, ul, li, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue Light', sans-serif;
+  background-color: #F7f7f7;
+  color: #C781bb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Ajout de transitions douces */
+body, button {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Effet de survol du bouton */
+button:hover {
+  transform: scale(1.1); /* Agrandit légèrement */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #C781bb;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #F7f7f7;
+  font-size: 18px;
+}
+
+/* Sections */
+.section {
+  display: none;
+  text-align: center;
+}
+
+.section.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Voyage', serif;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #C781bb;
+  color: #F7f7f7;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#countdown {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #C781bb; 
+}
+
+body.active #countdown {
+  color: #F7f7f7; /* Blanc lorsque le bouton est activé */
+}
+
+
+/* Calendar */
+#calendarContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 90%;
+  max-width: 500px;
+}
+
+#calendarContainer div {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #C781bb;
+  border-radius: 5px;
+  background-color: #F7f7f7;
+}
+
+#calendarContainer .event {
+  background-color: #C781bb;
+  color: #F7f7f7;
+}
+
+.event {
+  animation: pop-in 0.3s ease-out;
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Titre ajusté pour les couleurs inversées */
+h1.inverted {
+  color: #F7f7f7;
+}
+
+/* Point rose dans le calendrier */
+#calendarContainer .event {
+  background-color: #C781bb;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
